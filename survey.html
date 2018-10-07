@@ -5,50 +5,55 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 <body>
     <form id="survey-form">
         <div class="container">
-            <h1 id="title">FreeCodeCamp Bootstrap Survey Form</h1>
-            <p id="description">A responsive Survey Form to complete one of the FreeCodeCamp Web Design Projects</p>
+            <div class="jumbotron">
+                <h1 id="title" class="display-4">FreeCodeCamp Bootstrap Survey Form</h1>
+                <p class="lead" id="description">This is a responsive Survey Form to complete one of the FreeCodeCamp Web Design Projects.</p>
+                <hr class="my-4">
+                <p>It uses Bootstrap.css and HTML5 field validators. No additional technologies (jQuery, React, Angular, or Vue) are being used in this project</p>
+            </div>
 
             <!-- Name section -->
-            <div class="row">
+            <div class="row form-group">
                 <div class="col-sm">
                     <label id="name-label">Enter your name:</label>
                 </div>
                 <div class="col-sm">
-                    <input type="text" id="name" placeholder="your name" required />
+                    <input type="text" id="name" class="form-control" placeholder="your name" required />
                 </div>
             </div>
 
             <!-- Email section -->
-            <div class="row">
+            <div class="row form-group">
                 <div class="col-sm">
                     <label id="email-label">Enter your email:</label>
                 </div>
                 <div class="col-sm">
-                    <input id="email" placeholder="your email" type="email" required />
+                    <input id="email" class="form-control" placeholder="your email" type="email" required />
                 </div>
             </div>
 
             <!-- Age section -->
-            <div class="row">
+            <div class="row form-group">
                 <div class="col-sm">
                     <label id="number-label">Enter your age (0 - 99):</label>
                 </div>
                 <div class="col-sm">
-                    <input id="number" placeholder="your age" min="0" max="99" type="number" required />
+                    <input id="number" class="form-control" placeholder="your age" min="0" max="99" type="number" required />
                 </div>
             </div>
 
             <!-- Dropdown section -->
-            <div class="row">
+            <div class="row form-group">
                 <div class="col-sm">
                     <label id="number-label">How much you enjoy programming?</label>
                 </div>
-                <div class="col-sm">
-                    <select id="dropdown">
+                <div class="col-sm form-group">
+                    <select id="dropdown" class="form-control">
                         <option>Pretty much</option>
                         <option>It's nice</option>
                         <option>Not much</option>
@@ -58,92 +63,88 @@
             </div>
 
             <!-- Radio buttons section -->
-            <div class="row">
+            <div class="row form-group">
                 <div class="col-sm">
                     <label id="number-label">How many years of experience do you have?</label>
                 </div>
                 <div class="col-sm">
-                    <ul>
-                        <li>
-                            <label>
-                                <input name="radio-group" value="1" type="radio" />
-                                Less than 1
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input name="radio-group" value="2" type="radio" />
-                                Less than 3
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input name="radio-group" value="3" type="radio" />
-                                Less than 5
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input name="radio-group" value="4" type="radio" />
-                                5+
-                            </label>
-                        </li>
-                    </ul>
+                    <div class="form-check">
+                        <label>
+                            <input name="radio-group" value="1" type="radio" />
+                            Less than 1
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label>
+                            <input name="radio-group" value="2" type="radio" />
+                            More than 1, less than 3
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label>
+                            <input name="radio-group" value="3" type="radio" />
+                            Less than 5
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label>
+                            <input name="radio-group" value="4" type="radio" />
+                            5+
+                        </label>
+                    </div>
                 </div>
             </div>
 
             <!-- Check boxes section -->
-            <div class="row">
+            <div class="row form-group">
                 <div class="col-sm">
                     <label id="number-label">Please select your areas of expertise: </label>
                 </div>
                 <div class="col-sm">
-                    <ul>
-                        <li>
-                            <label>
-                                <input value="1" type="checkbox" />
-                                Front-end technologies (CSS, HTML, JS)
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input value="2" type="checkbox" />
-                                Back-end technologies (C#, Java)
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input value="3" type="checkbox" />
-                                Databases (SQL, Oracle, MongoDB)
-                            </label>
-                        </li>
-                        <li>
-                            <label>
-                                <input value="4" type="checkbox" />
-                                Game Development
-                            </label>
-                        </li>
-                    </ul>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Front-end technologies (CSS, HTML, JS)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="2" id="defaultCheck2">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Back-end technologies (C#, Java)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="3" id="defaultCheck3">
+                        <label class="form-check-label" for="defaultCheck3">
+                            Databases (SQL, Oracle, MongoDB)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="4" id="defaultCheck4">
+                        <label class="form-check-label" for="defaultCheck4">
+                            Game Development
+                        </label>
+                    </div>
                 </div>
             </div>
 
             <!-- Text area section -->
-            <div class="row">
+            <div class="row form-group">
                 <div class="col-sm">
                     <label id="number-label">Please enter any additional comments:</label>
                 </div>
                 <div class="col-sm">
-                    <textarea id="comments"></textarea>
+                    <textarea id="comments" class="form-control"></textarea>
                 </div>
             </div>
 
             <!-- Submit button -->
-            <div class="row">
+            <div class="row form-group">
                 <div class="col-sm">
-                    <input type="submit" value="Submit"/>
+                    <input type="submit" id="submit" value="Submit" class="btn btn-info form-control" />
                 </div>
             </div>
         </div>
-    </form>
+</form>
 </body>
 </html>
